@@ -1,0 +1,33 @@
+通过路由表,useNavigate hook和antd menu组件实现路由跳转
+通过json-server模拟数据 axios.get/post/patch/delete实现数据的增删改查功能
+权限管理开关控制会更新json文件的数据，通过三目表达式来控制颜色和disabled状态
+
+
+功能：
+通过判断有无token来判断是否前往login页面
+权限管理：不同权限可以看到不同的导航栏，高权限者可以管理低权限者,可以添加管理者
+通过判断权限值来禁用添加和更新用户里的选项
+分为超级管理员，局域管理员，区域编辑
+
+项目主要布局，主要组件借用了antd组件库
+用到react-tsparticles粒子插件库来美化login页面
+通过nprogress库来实现路由跳转进度条显示
+通过react draft wysiwyg库实现富文本编辑器
+通过echarts来美化首页
+通过lodash来分类接收到的数据
+
+新闻管理
+auditState来控制审核状态，publishState来控制发布状态
+撰写新闻：用了步骤条组件，有提交审核列表或保存在草稿箱中的功能
+审核会改变其auditState的值来确定退回草稿箱还是通过,会有notification组件通知使用者新闻被退回
+新闻分类用了可编辑单元格
+
+首页
+显示点赞量高的新闻，所有新闻分类表，以及个人新闻分类表
+
+游客系统
+不需要登录，开放给大众，可以看到所有已发布的新闻，具有点赞功能，能记录浏览量
+
+折叠图标用了pubsubjs实现兄弟组件之间的通信
+
+loading效果二次封装axios拦截,redux实现全局通信
